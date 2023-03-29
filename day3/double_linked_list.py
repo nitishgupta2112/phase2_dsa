@@ -89,18 +89,44 @@ class DoublyLinkedList:
         while temp is not None:
             print(temp.data,sep=",")
             temp = temp.next
-
+    
+    def deleteFromPosition(self,Position):
+        if self.isempty():
+            print("Linked list is empty")
+        elif Position == 1:
+            self.deleteFromBeginning()
+        else:
+            temp = self.head
+            count=1
+            while temp is not None:
+                if count == Position:
+                    break
+                temp = temp.next
+                count = count+1
+            if temp is None:
+                print("cannot be deleted")
+                return
+            elif temp.next is None:
+                self.deleteFromEndinning()
+                return
+            temp.previous.next = temp.next
+            temp.next.previous = temp.previous
+            temp.next = None
+            temp.previous = None
 
 x = DoublyLinkedList()
 print(x.isempty())
 x.insertAtBeginning(5)
-x.insertAtBeginning(15)
-x.insertAtBeginning(25)
-x.insertAtEnd(40)
-x.insertAtEnd(45)
-x.insertAtPosition(6,3)
+x.insertAtEnd(10)
+x.insertAtEnd(15)
+x.insertAtEnd(20)
+x.insertAtEnd(25)
+x.insertAtEnd(30)
+x.insertAtEnd(35)
+x.insertAtPosition(20,3)
 x.printLinkedList()
 print("no of nodes",x.length())
 x.deleteFromBeginning()
 x.deleteFromEndinning()
+x.deleteFromPosition(3)
 x.printLinkedList()
