@@ -1,9 +1,9 @@
 class node:
-    def _init_(self,data=None):
+    def __init__(self,data=None):
         self.data=data
         self.next=None
 class slinkedlist:
-    def _init_(self):
+    def __init__(self):
         self.headval=None
     def listprint(self):
         printval=self.headval  #temp
@@ -80,7 +80,7 @@ list.atend('A')
 list.atend('w')
 list.atend('a')
 list.atend('y')
-list.listprint()
+#list.listprint()
 print()
 s=''
 temp=list.headval
