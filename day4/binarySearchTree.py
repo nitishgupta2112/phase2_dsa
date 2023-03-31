@@ -62,6 +62,6 @@ inorder(root)
 
 print("\nDelete 10")
 
-root = deleteNode(root,8)
+root = deleteNode(root,7)
 print("Inorder traversal: ", end=' ')
 inorder(root)
