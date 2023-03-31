@@ -25,16 +25,23 @@ class queue:
     
     def display(self):
         for index in range(self.__front,self.__rear+1):
-            print(self.__elements[index])
+            if self.__elements[index]%2==0:
+                print("odd Queue")
+                print(self.__elements[index])
+            else:
+                print("even Queue")
+                print(self.__elements[index])
     def get_max_size(self):
         return self.__max_size
 
-que = queue(5)
+que = queue(10)
 print("Queue is full",que.is_full())
 print("is empty",que.is_empty())
-que.enqueue(100)
-que.enqueue(200)
-que.enqueue(300)
-que.enqueue(400)
-que.enqueue(500)
+que.enqueue(2)
+que.enqueue(7)
+que.enqueue(9)
+que.enqueue(4)
+que.enqueue(6)
+que.enqueue(5)
+que.enqueue(10)
 que.display()

@@ -19,17 +19,17 @@ class slinkedlist:
     def AtEnd(self, newdata):
       NewNode = node(newdata)
       if self.headval is None:
-         self.headval = NewNode
-         return
+        self.headval = NewNode
+        return
       laste = self.headval
       while(laste.nextval):
-         laste = laste.nextval
+        laste = laste.nextval
       laste.nextval=NewNode
     
     def Inbetween(self,middle_node,newdata):
       if middle_node is None:
-         print("The mentioned node is absent")
-         return
+        print("The mentioned node is absent")
+        return
       NewNode = node(newdata)
       NewNode.nextval = middle_node.nextval
       middle_node.nextval = NewNode
