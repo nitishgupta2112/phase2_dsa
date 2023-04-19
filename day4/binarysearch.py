@@ -9,10 +9,10 @@ def binary_search(list1, n,low,high):
             return mid  
     return -1  
 
-list1 = [12, 24, 32, 39, 45, 50, 54]  
-n = 45 
-result = binary_search(list1, n,0,len(list1)) 
+array = list(map(int,input().split(",")))
+n = int(input())
+result = binary_search(array, n,0,len(array)) 
 if result != -1:  
-    print("Element is present at index", str(result))  
+    print(array.index(n))  
 else:  
-    print("Element is not present in list1") 
+    print(-1) 

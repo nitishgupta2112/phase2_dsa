@@ -3,11 +3,11 @@ def linearSearch(array,n,x):
         if array[i]==x:
             return i
     return -1
-array = [1,2,3,4,5,6]
-x = 7
+array = list(map(int,input().split(",")))
+x = int(input())
 n = len(array)
 result = linearSearch(array,n,x)
 if result == -1:
-    print("element not found")
+    print(-1)
 else:
-    print("element found",result)
+    print(array.index(x))
